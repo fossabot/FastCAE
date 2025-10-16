@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="/">
+    <file>translation/pluginabaqus_zh.qm</file>
+  </qresource>
+</RCC>

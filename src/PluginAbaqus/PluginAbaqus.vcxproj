@@ -1,0 +1,835 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <RootNamespace>PluginAbaqus</RootNamespace>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>..\..\output\bin_d\plugins\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>debug\obj\</IntermediateDirectory>
+    <PrimaryOutput>PluginAbaqus</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolSet>v120</PlatformToolSet>
+    <OutputDirectory>..\..\output\bin\plugins\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <IntermediateDirectory>release\obj\</IntermediateDirectory>
+    <PrimaryOutput>PluginAbaqus</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">..\..\output\bin_d\plugins\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\obj\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PluginAbaqus</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</IgnoreImportLibrary>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">..\..\output\bin\plugins\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\obj\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PluginAbaqus</TargetName>
+    <IgnoreImportLibrary Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</IgnoreImportLibrary>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\VTK\vtk_7.1.1_x64_Debug\include\vtk-7.1;.;..;$(QTDIR)\include;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;debug\moc;debug\qui;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\obj\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;PLUGINABAQUS_API;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkalglib-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkChartsCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkChartsCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonColor-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonColorPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonComputationalGeometry-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonComputationalGeometryPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonDataModel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonDataModelPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonExecutionModel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonExecutionModelPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonMath-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonMathPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonMisc-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonMiscPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonSystem-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonSystemPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonTransforms-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkCommonTransformsPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkDICOMParser-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkDomainsChemistry-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkDomainsChemistryOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkDomainsChemistryOpenGL2Python27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkDomainsChemistryPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkexoIIc-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkexpat-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersAMR-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersAMRPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersExtraction-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersExtractionPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersFlowPaths-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersFlowPathsPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersGeneral-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersGeneralPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersGeneric-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersGenericPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersGeometry-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersGeometryPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersHybrid-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersHybridPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersHyperTree-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersHyperTreePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersImaging-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersImagingPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersModeling-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersModelingPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersParallel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersParallelImaging-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersParallelImagingPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersParallelPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersPoints-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersPointsPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersProgrammable-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersProgrammablePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersPython-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersPythonPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersSelection-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersSelectionPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersSMP-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersSMPPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersSources-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersSourcesPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersStatistics-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersStatisticsPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersTexture-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersTexturePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersVerdict-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkFiltersVerdictPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkfreetype-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkGeovisCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkGeovisCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkgl2ps-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkglew-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkGUISupportMFC-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkGUISupportQt-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkGUISupportQtOpenGL-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkGUISupportQtSQL-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkGUISupportQtWebkit-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkhdf5-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkhdf5_hl-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingColor-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingColorPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingFourier-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingFourierPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingGeneral-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingGeneralPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingHybrid-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingHybridPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingMath-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingMathPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingMorphological-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingMorphologicalPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingOpenGL2Python27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingSources-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingSourcesPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingStatistics-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingStatisticsPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingStencil-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkImagingStencilPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInfovisCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInfovisCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInfovisLayout-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInfovisLayoutPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInteractionImage-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInteractionImagePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInteractionStyle-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInteractionStylePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInteractionWidgets-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkInteractionWidgetsPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOAMR-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOAMRPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOEnSight-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOEnSightPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOExodus-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOExodusPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOExport-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOExportOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOExportOpenGL2Python27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOExportPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOFFMPEG-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOFFMPEGPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOGeometry-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOGeometryPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOImage-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOImagePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOImport-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOImportPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOInfovis-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOInfovisPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOLegacy-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOLegacyPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOLSDyna-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOLSDynaPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOMINC-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOMINCPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOMovie-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOMoviePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIONetCDF-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIONetCDFPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOParallel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOParallelPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOParallelXML-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOParallelXMLPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOPLY-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOPLYPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOSQL-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOSQLPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOTecplotTable-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOTecplotTablePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOVideo-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOVideoPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOXML-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOXMLParser-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOXMLParserPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkIOXMLPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkjpeg-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkjsoncpp-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtklibxml2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkmetaio-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkNetCDF-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkNetCDF_cxx-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkoggtheora-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkParallelCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkParallelCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkpng-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkproj4-7.1_d.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkPythonInterpreter-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkPythonInterpreterPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingAnnotation-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingAnnotationPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingContext2D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingContext2DPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingContextOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingContextOpenGL2Python27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingFreeType-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingFreeTypePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingGL2PSOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingGL2PSOpenGL2Python27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingImage-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingImagePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingLabel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingLabelPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingLICOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingLICOpenGL2Python27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingLOD-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingLODPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingOpenGL2Python27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingOpenVR-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingOpenVRPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingQt-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingQtPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingSceneGraph-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingSceneGraphPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingVolume-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingVolumeOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingVolumeOpenGL2Python27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkRenderingVolumePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtksqlite-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtksys-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkTestingGenericBridge-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkTestingIOSQL-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkTestingRendering-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkTestingRenderingPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtktiff-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkverdict-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkViewsContext2D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkViewsContext2DPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkViewsCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkViewsCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkViewsInfovis-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkViewsInfovisPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkViewsQt-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkWebCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkWebCorePython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkWebGLExporter-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkWebGLExporterPython27D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkWrappingPython27Core-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkWrappingTools-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Debug\lib\\vtkzlib-7.1.lib;..\..\output\bin_d\PluginManager.lib;..\..\output\bin_d\ModelData.lib;..\..\output\bin_d\ModuleBase.lib;..\..\output\bin_d\DataProperty.lib;..\..\output\bin_d\ProjectTree.lib;..\..\output\bin_d\MainWidgets.lib;..\..\output\bin_d\ProjectTreeExtend.lib;..\..\output\bin_d\MeshData.lib;..\..\output\bin_d\IO.lib;..\..\output\bin_d\SelfDefObject.lib;..\..\output\bin_d\PostWidgets.lib;Qt5PrintSupportd.lib;Qt5Widgetsd.lib;Qt5Guid.lib;Qt5Xmld.lib;Qt5Cored.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\VTK\vtk_7.1.1_x64_Debug\lib\;..\..\output\bin_d;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <OutputFile>$(OutDir)\PluginAbaqus.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Console</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_CONSOLE;UNICODE;WIN32;WIN64;PLUGINABAQUS_API;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;..\..\VTK\vtk_7.1.1_x64_Release\include\vtk-7.1;.;..;$(QTDIR)\include;$(QTDIR)\include\QtPrintSupport;$(QTDIR)\include\QtWidgets;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtXml;$(QTDIR)\include\QtCore;release\moc;release\qui;$(QTDIR)\mkspecs\win32-msvc2013;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm200 -Zc:strictStrings -w34100 -w34189 %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\obj\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\obj\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;PLUGINABAQUS_API;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>glu32.lib;opengl32.lib;gdi32.lib;user32.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkalglib-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkChartsCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkChartsCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonColor-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonColorPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonComputationalGeometry-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonComputationalGeometryPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonDataModel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonDataModelPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonExecutionModel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonExecutionModelPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonMath-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonMathPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonMisc-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonMiscPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonSystem-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonSystemPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonTransforms-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkCommonTransformsPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkDICOMParser-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkDomainsChemistry-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkDomainsChemistryOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkDomainsChemistryOpenGL2Python26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkDomainsChemistryPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkexoIIc-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkexpat-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersAMR-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersAMRPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersExtraction-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersExtractionPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersFlowPaths-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersFlowPathsPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersGeneral-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersGeneralPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersGeneric-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersGenericPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersGeometry-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersGeometryPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersHybrid-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersHybridPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersHyperTree-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersHyperTreePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersImaging-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersImagingPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersModeling-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersModelingPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersParallel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersParallelImaging-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersParallelImagingPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersParallelPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersPoints-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersPointsPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersProgrammable-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersProgrammablePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersPython-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersPythonPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersSelection-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersSelectionPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersSMP-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersSMPPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersSources-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersSourcesPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersStatistics-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersStatisticsPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersTexture-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersTexturePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersVerdict-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkFiltersVerdictPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkfreetype-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkGeovisCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkGeovisCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkgl2ps-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkglew-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkGUISupportMFC-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkGUISupportQt-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkGUISupportQtOpenGL-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkGUISupportQtSQL-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkGUISupportQtWebkit-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkhdf5-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkhdf5_hl-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingColor-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingColorPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingFourier-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingFourierPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingGeneral-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingGeneralPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingHybrid-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingHybridPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingMath-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingMathPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingMorphological-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingMorphologicalPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingOpenGL2Python26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingSources-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingSourcesPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingStatistics-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingStatisticsPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingStencil-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkImagingStencilPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInfovisCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInfovisCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInfovisLayout-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInfovisLayoutPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInteractionImage-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInteractionImagePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInteractionStyle-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInteractionStylePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInteractionWidgets-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkInteractionWidgetsPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOAMR-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOAMRPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOEnSight-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOEnSightPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOExodus-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOExodusPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOExport-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOExportOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOExportOpenGL2Python26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOExportPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOFFMPEG-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOFFMPEGPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOGeometry-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOGeometryPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOImage-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOImagePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOImport-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOImportPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOInfovis-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOInfovisPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOLegacy-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOLegacyPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOLSDyna-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOLSDynaPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOMINC-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOMINCPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOMovie-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOMoviePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIONetCDF-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIONetCDFPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOParallel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOParallelPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOParallelXML-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOParallelXMLPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOPLY-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOPLYPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOSQL-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOSQLPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOTecplotTable-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOTecplotTablePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOVideo-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOVideoPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOXML-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOXMLParser-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOXMLParserPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkIOXMLPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkjpeg-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkjsoncpp-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtklibxml2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkmetaio-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkNetCDF-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkNetCDF_cxx-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkoggtheora-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkParallelCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkParallelCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkpng-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkproj4-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkPythonInterpreter-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkPythonInterpreterPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingAnnotation-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingAnnotationPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingContext2D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingContext2DPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingContextOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingContextOpenGL2Python26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingFreeType-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingFreeTypePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingGL2PSOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingGL2PSOpenGL2Python26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingImage-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingImagePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingLabel-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingLabelPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingLICOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingLICOpenGL2Python26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingLOD-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingLODPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingOpenGL2Python26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingOpenVR-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingOpenVRPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingQt-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingQtPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingSceneGraph-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingSceneGraphPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingVolume-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingVolumeOpenGL2-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingVolumeOpenGL2Python26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkRenderingVolumePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtksqlite-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtksys-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkTestingGenericBridge-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkTestingIOSQL-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkTestingRendering-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkTestingRenderingPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtktiff-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkverdict-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkViewsContext2D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkViewsContext2DPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkViewsCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkViewsCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkViewsInfovis-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkViewsInfovisPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkViewsQt-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkWebCore-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkWebCorePython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkWebGLExporter-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkWebGLExporterPython26D-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkWrappingPython26Core-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkWrappingTools-7.1.lib;..\..\VTK\vtk_7.1.1_x64_Release\lib\\vtkzlib-7.1.lib;PluginManager.lib;ModelData.lib;ModuleBase.lib;DataProperty.lib;ProjectTree.lib;MainWidgets.lib;ProjectTreeExtend.lib;MeshData.lib;IO.lib;SelfDefObject.lib;PostWidgets.lib;Qt5PrintSupport.lib;Qt5Widgets.lib;Qt5Gui.lib;Qt5Xml.lib;Qt5Core.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\VTK\vtk_7.1.1_x64_Release\lib\;..\..\output\bin;$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkDLL>true</LinkDLL>
+      <LinkIncremental>false</LinkIncremental>
+      <OutputFile>$(OutDir)\PluginAbaqus.dll</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;WIN32;WIN64;PLUGINABAQUS_API;QT_NO_DEBUG;QT_PRINTSUPPORT_LIB;QT_WIDGETS_LIB;QT_GUI_LIB;QT_XML_LIB;QT_CORE_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="abaqusmodel.cpp" />
+    <ClCompile Include="abaqustree.cpp" />
+    <ClCompile Include="bccreatewidget.cpp" />
+    <ClCompile Include="bcdata.cpp" />
+    <ClCompile Include="bceditwidget.cpp" />
+    <ClCompile Include="custompostwidget.cpp" />
+    <ClCompile Include="inpwritemanager.cpp" />
+    <ClCompile Include="odb2vtkconfig.cpp" />
+    <ClCompile Include="pluginabaqus.cpp" />
+    <ClCompile Include="setmaterialwidget.cpp" />
+    <ClCompile Include="stepcreatewidget.cpp" />
+    <ClCompile Include="stepdata.cpp" />
+    <ClCompile Include="stepeditwidget.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="PluginAbaqusAPI.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="abaqusmodel.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="abaqustree.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">abaqustree.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Debug/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore abaqustree.h -o debug\moc\moc_abaqustree.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC abaqustree.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc\moc_abaqustree.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">abaqustree.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Release/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore abaqustree.h -o release\moc\moc_abaqustree.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC abaqustree.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc\moc_abaqustree.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="bccreatewidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bccreatewidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Debug/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore bccreatewidget.h -o debug\moc\moc_bccreatewidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC bccreatewidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc\moc_bccreatewidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bccreatewidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Release/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore bccreatewidget.h -o release\moc\moc_bccreatewidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC bccreatewidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc\moc_bccreatewidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="bcdata.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="bceditwidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bceditwidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Debug/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore bceditwidget.h -o debug\moc\moc_bceditwidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC bceditwidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc\moc_bceditwidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bceditwidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Release/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore bceditwidget.h -o release\moc\moc_bceditwidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC bceditwidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc\moc_bceditwidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="custompostwidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">custompostwidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Debug/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore custompostwidget.h -o debug\moc\moc_custompostwidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC custompostwidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc\moc_custompostwidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">custompostwidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Release/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore custompostwidget.h -o release\moc\moc_custompostwidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC custompostwidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc\moc_custompostwidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="inpwritemanager.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="odb2vtkconfig.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="pluginabaqus.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">pluginabaqus.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Debug/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore pluginabaqus.h -o debug\moc\moc_pluginabaqus.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC pluginabaqus.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc\moc_pluginabaqus.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">pluginabaqus.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Release/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore pluginabaqus.h -o release\moc\moc_pluginabaqus.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC pluginabaqus.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc\moc_pluginabaqus.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="setmaterialwidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setmaterialwidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Debug/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore setmaterialwidget.h -o debug\moc\moc_setmaterialwidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC setmaterialwidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc\moc_setmaterialwidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setmaterialwidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Release/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore setmaterialwidget.h -o release\moc\moc_setmaterialwidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC setmaterialwidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc\moc_setmaterialwidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="stepcreatewidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stepcreatewidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Debug/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore stepcreatewidget.h -o debug\moc\moc_stepcreatewidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC stepcreatewidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc\moc_stepcreatewidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stepcreatewidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Release/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore stepcreatewidget.h -o release\moc\moc_stepcreatewidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC stepcreatewidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc\moc_stepcreatewidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="stepdata.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="stepeditwidget.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stepeditwidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Debug/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore stepeditwidget.h -o debug\moc\moc_stepeditwidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">MOC stepeditwidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc\moc_stepeditwidget.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stepeditwidget.h;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\moc.exe  -DUNICODE -DWIN32 -DWIN64 -DPLUGINABAQUS_API -DQT_NO_DEBUG -DQT_PRINTSUPPORT_LIB -DQT_WIDGETS_LIB -DQT_GUI_LIB -DQT_XML_LIB -DQT_CORE_LIB -D_MSC_VER=1800 -D_WIN32 -D_WIN64 -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/mkspecs/win32-msvc2013 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/VTK/vtk_7.1.1_x64_Release/include/vtk-7.1 -IF:/CompanyProject/Abaqus/04_Code/trunk/PluginAbaqus -IF:/CompanyProject/Abaqus/04_Code/trunk -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtPrintSupport -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtWidgets -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtGui -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtXml -IC:/Qt/Qt5.4.2/5.4/msvc2013_64_opengl/include/QtCore stepeditwidget.h -o release\moc\moc_stepeditwidget.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">MOC stepeditwidget.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc\moc_stepeditwidget.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="debug\moc\moc_abaqustree.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc\moc_abaqustree.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc\moc_bccreatewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc\moc_bccreatewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc\moc_bceditwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc\moc_bceditwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc\moc_custompostwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc\moc_custompostwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc\moc_pluginabaqus.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc\moc_pluginabaqus.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc\moc_setmaterialwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc\moc_setmaterialwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc\moc_stepcreatewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc\moc_stepcreatewidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\moc\moc_stepeditwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\moc\moc_stepeditwidget.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="debug\rcc\qrc_resource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="release\rcc\qrc_resource.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <CustomBuild Include="debug\qui\ui_bccreatewidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\qui\ui_bccreatewidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="debug\qui\ui_bceditwidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\qui\ui_bceditwidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="debug\qui\ui_custompostwidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\qui\ui_custompostwidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="debug\qui\ui_setmaterialwidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\qui\ui_setmaterialwidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="debug\qui\ui_stepcreatewidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\qui\ui_stepcreatewidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="debug\qui\ui_stepeditwidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="release\qui\ui_stepeditwidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="resource\translation\pluginabaqus_zh.ts">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="bccreatewidget.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bccreatewidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe bccreatewidget.ui -o debug\qui\ui_bccreatewidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC bccreatewidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qui\ui_bccreatewidget.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bccreatewidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe bccreatewidget.ui -o release\qui\ui_bccreatewidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC bccreatewidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qui\ui_bccreatewidget.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="bceditwidget.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">bceditwidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe bceditwidget.ui -o debug\qui\ui_bceditwidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC bceditwidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qui\ui_bceditwidget.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">bceditwidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe bceditwidget.ui -o release\qui\ui_bceditwidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC bceditwidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qui\ui_bceditwidget.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="custompostwidget.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">custompostwidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe custompostwidget.ui -o debug\qui\ui_custompostwidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC custompostwidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qui\ui_custompostwidget.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">custompostwidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe custompostwidget.ui -o release\qui\ui_custompostwidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC custompostwidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qui\ui_custompostwidget.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="setmaterialwidget.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setmaterialwidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe setmaterialwidget.ui -o debug\qui\ui_setmaterialwidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC setmaterialwidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qui\ui_setmaterialwidget.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setmaterialwidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe setmaterialwidget.ui -o release\qui\ui_setmaterialwidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC setmaterialwidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qui\ui_setmaterialwidget.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="stepcreatewidget.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stepcreatewidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe stepcreatewidget.ui -o debug\qui\ui_stepcreatewidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC stepcreatewidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qui\ui_stepcreatewidget.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stepcreatewidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe stepcreatewidget.ui -o release\qui\ui_stepcreatewidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC stepcreatewidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qui\ui_stepcreatewidget.h;%(Outputs)</Outputs>
+      <SubType>Designer</SubType>
+    </CustomBuild>
+    <CustomBuild Include="stepeditwidget.ui">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">stepeditwidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe stepeditwidget.ui -o debug\qui\ui_stepeditwidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">UIC stepeditwidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\qui\ui_stepeditwidget.h;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">stepeditwidget.ui;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\uic.exe stepeditwidget.ui -o release\qui\ui_stepeditwidget.h
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">UIC stepeditwidget.ui</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\qui\ui_stepeditwidget.h;%(Outputs)</Outputs>
+      <SubType>Designer</SubType>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="resource\translation\pluginabaqus_zh.qm">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="resource\resource.qrc">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">resource\resource.qrc;resource\translation\pluginabaqus_zh.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\rcc.exe -name resource resource\resource.qrc -o debug\rcc\qrc_resource.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">RCC resource\resource.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\rcc\qrc_resource.cpp;%(Outputs)</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">resource\resource.qrc;resource\translation\pluginabaqus_zh.qm;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+if errorlevel 1 goto VCEnd
+$(QTDIR)\bin\rcc.exe -name resource resource\resource.qrc -o release\rcc\qrc_resource.cpp
+if errorlevel 1 goto VCEnd
+endlocal</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">RCC resource\resource.qrc</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\rcc\qrc_resource.cpp;%(Outputs)</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Qt5Version_x0020_x64="msvc2013_64_opengl" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
