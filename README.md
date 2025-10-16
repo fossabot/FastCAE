@@ -1,5 +1,6 @@
-
 # 说明
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCookieShi2333%2FFastCAE.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FCookieShi2333%2FFastCAE?ref=badge_shield)
+
 
 
 ## 源码文件夹结构
@@ -173,3 +174,7 @@ cmake --build build --target package
 技术交流QQ群：671925863
 
 官方微信号：FastCAE-DISO
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FCookieShi2333%2FFastCAE.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FCookieShi2333%2FFastCAE?ref=badge_large)
